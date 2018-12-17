@@ -81,9 +81,10 @@ phina.define('MainScene', {
         }
         //ゲームクリア
         if (this.enemyGroup.children.length <= 0) {
-            GAME_STATUS = "GAME CLEAR";
+            SCORE += 3500;
             this.exit();
         }
+
     }
 });
 
@@ -243,7 +244,7 @@ phina.define('EnemyGroup', {
         this.make(scene, column, row, gapX, gapY);
         this.beginInterval = 1000;
         this.maxAmountOfEnemy = this.children.length;
-        this.attackInterval = 200;
+        this.attackInterval = 100;
         this.isOnWall = false;
 
     },
